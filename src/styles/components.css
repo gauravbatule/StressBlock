@@ -1,0 +1,179 @@
+/* Component Styles - Soft Focus UI */
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  border-radius: var(--radius-full); /* Pill shapes for softness */
+  transition: all 0.2s ease;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn-primary {
+  background: var(--color-accent-primary);
+  color: #0f1115; /* Dark text on bright button for contrast */
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.3);
+}
+
+.btn-secondary {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  border-color: var(--glass-border);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--glass-border-light);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+}
+
+.btn-ghost:hover {
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Button Sizes */
+.btn-sm { 
+  padding: 0.4rem 1rem; 
+  font-size: 0.8rem;
+  min-height: 32px;
+}
+
+.btn-md { 
+  padding: 0.75rem 1.5rem; 
+  font-size: 0.95rem;
+  min-height: 48px;
+}
+
+.btn-lg { 
+  padding: 1rem 2rem; 
+  font-size: 1.1rem;
+  min-height: 56px;
+  width: 100%; /* Mobile friendly default */
+}
+
+/* ===== CARDS ===== */
+.card {
+  padding: 1.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card.clickable:hover {
+  transform: translateY(-2px);
+  border-color: var(--glass-border-light);
+}
+
+.card.active-card {
+  border-color: var(--color-accent-primary);
+  background: rgba(129, 140, 248, 0.08);
+}
+
+.card-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.card-content {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ===== NAVIGATION ===== */
+/* Preserving the structure/layout, updating visuals to match theme */
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  font-weight: 500;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.nav-link svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2;
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.nav-link:hover svg {
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  color: var(--color-accent-primary);
+}
+
+.nav-link.active svg {
+  stroke-width: 2.5;
+}
+
+/* ===== UTILITIES ===== */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.divider {
+  height: 1px;
+  background: var(--glass-border);
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+/* Badge Styles */
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge-neutral { background: var(--color-bg-tertiary); color: var(--color-text-secondary); }
+.badge-blue { background: rgba(129, 140, 248, 0.15); color: var(--color-accent-primary); }
+.badge-green { background: rgba(74, 222, 128, 0.15); color: var(--color-success); }
+.badge-orange { background: rgba(251, 113, 133, 0.15); color: var(--color-danger); }
