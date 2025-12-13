@@ -3,9 +3,8 @@ import { BreathingVisualizer } from './BreathingVisualizer';
 import { useBreathing } from '../../hooks/useBreathing';
 import type { BreathingMode } from '../../hooks/useBreathing';
 import { Button } from '../../components/Button';
-import { Card } from '../../components/Card';
 import { motion } from 'framer-motion';
-import { Play, Square, Box, Moon, Heart, Zap, Wind } from 'lucide-react';
+import { Box, Moon, Heart, Zap, Wind } from 'lucide-react';
 
 const modeIcons: Record<BreathingMode, React.ElementType> = {
     box: Box,

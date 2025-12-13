@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '../../components/Button';
 import { Card } from '../../components/Card';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Send, Smile, Meh, Frown, Trash2, Calendar, Edit3, BookOpen } from 'lucide-react';
+import { Smile, Meh, Frown, Trash2, Calendar, Edit3, BookOpen } from 'lucide-react';
 import {
     getJournalEntries,
     saveJournalEntry,
     deleteJournalEntry,
     saveMoodEntry,
-    getMoodHistory,
     type JournalEntry
 } from '../../lib/storage';
 
@@ -186,7 +185,7 @@ export const JournalPage: React.FC = () => {
                                     background: 'var(--glass-border-light)'
                                 }} />
 
-                                {entries.map((entry, index) => {
+                                {entries.map((entry) => {
                                     const entryMood = getMoodInfo(entry.mood);
                                     return (
                                         <div key={entry.id} style={{ position: 'relative', marginBottom: '2rem' }}>

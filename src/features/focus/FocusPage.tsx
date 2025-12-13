@@ -3,7 +3,7 @@ import { useTimer } from '../../hooks/useTimer';
 import { useNoise } from '../../hooks/useNoise';
 import type { NoiseType } from '../../hooks/useNoise';
 import { Button } from '../../components/Button';
-import { Card } from '../../components/Card';
+
 import { motion } from 'framer-motion';
 import { Play, Pause, RotateCcw, Volume2, VolumeX, Timer } from 'lucide-react';
 

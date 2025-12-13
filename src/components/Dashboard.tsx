@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Card } from './Card';
-import { Wind, Timer, BookOpen, Moon, Brain, ChevronRight, Sun, Calendar, Sparkles } from 'lucide-react';
+import { Wind, Timer, BookOpen, Moon, Brain, ChevronRight, Calendar, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { getFocusStats, getMemoryScores, getMoodHistory } from '../lib/storage';
 
