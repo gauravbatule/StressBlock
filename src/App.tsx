@@ -8,6 +8,7 @@ import { SleepPage } from './features/sleep/SleepPage';
 import { GamesPage } from './features/games/GamesPage';
 
 import { Dashboard } from './components/Dashboard';
+import { ChatBot } from './features/chat/ChatBot';
 import { Home, Wind, Timer, BookOpen, Moon, Brain } from 'lucide-react';
 
 function Navigation() {
@@ -118,6 +119,7 @@ function AppContent() {
 
 
       <Navigation />
+      <ChatBot />
     </div>
   );
 }
